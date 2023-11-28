@@ -25,3 +25,13 @@ button {
     border: none;
     border-radius: 5px;
 }
+
+#generator-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#history-container {
+  margin-top: 20px; /* Adjust as needed */
+}
