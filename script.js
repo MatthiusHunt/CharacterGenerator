@@ -259,6 +259,8 @@ const darkSecrets = [
 
 
 
+const historyContainer = document.getElementById("history");
+
 function getRandomValue(arr) {
     const randomIndex = Math.floor(Math.random() * arr.length);
     return arr[randomIndex];
@@ -273,6 +275,12 @@ function generateCharacter() {
 
     const characterDetails = `Age: ${age}<br>Gender: ${gender}<br>Unusual Profession: ${unusualProfession}<br>Unusual Place: ${unusualPlace}<br>With a Dark Secret: ${darkSecret}`;
 
+    // Display the current character details
     document.getElementById("character").innerHTML = characterDetails;
+
+    // Update the history
+    const historyItem = document.createElement("div");
+    historyItem.innerHTML = characterDetails;
+    historyContainer.prepend(historyItem);
 }
 
