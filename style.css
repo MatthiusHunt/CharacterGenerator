@@ -26,12 +26,12 @@ button {
     border-radius: 5px;
 }
 
-#generator-container {
+generator-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-#history-container {
+history-container {
   margin-top: 20px; /* Adjust as needed */
 }
