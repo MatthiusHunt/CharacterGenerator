@@ -283,4 +283,3 @@ function generateCharacter() {
     historyItem.innerHTML = characterDetails;
     historyContainer.prepend(historyItem);
 }
-
