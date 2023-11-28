@@ -79,7 +79,7 @@ const unusualPlaces = [
     "A lost city hidden in the Amazon rainforest",
     "A remote space station conducting illegal experiments" ];
 
-const darkSecret = [ 
+const darkSecrets = [ 
     "They have a criminal record.",
     "They are in debt to dangerous people.",
     "They are addicted to drugs or alcohol.",
