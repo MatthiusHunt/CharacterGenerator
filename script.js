@@ -77,8 +77,7 @@ const unusualPlaces = [
     "A magical island with mystical creatures",
     "A floating city on a giant airship",
     "A lost city hidden in the Amazon rainforest",
-    "A remote space station conducting illegal experiments"
-];
+    "A remote space station conducting illegal experiments" ];
 
 const darkSecrets = ["Secret1", "Secret2", /* add all 70 dark secrets */];
 
