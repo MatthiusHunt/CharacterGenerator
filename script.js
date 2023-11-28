@@ -1,3 +1,11 @@
+const ages = Array.from({ length: 84 }, (_, i) => i + 1);
+const genders = ["Male", "Female", "Non-Binary"];
+const unusualProfessions = [
+    "Profession1",
+    "Profession2",
+    // ... add all 100 professions
+];
+
 const unusualPlaces = [
     "A futuristic metropolis",
     "An enchanted forest",
@@ -152,16 +160,22 @@ const darkSecrets = [
     "They have a history of identity theft." ];
 
 
+
+
 function getRandomValue(arr) {
     const randomIndex = Math.floor(Math.random() * arr.length);
     return arr[randomIndex];
 }
 
 function generateCharacter() {
+    const age = getRandomValue(ages);
+    const gender = getRandomValue(genders);
+    const unusualProfession = getRandomValue(unusualProfessions);
     const unusualPlace = getRandomValue(unusualPlaces);
     const darkSecret = getRandomValue(darkSecrets);
 
-    const characterDetails = `Unusual Place: ${unusualPlace}<br>With a Dark Secret: ${darkSecret}`;
+    const characterDetails = `Age: ${age}<br>Gender: ${gender}<br>Unusual Profession: ${unusualProfession}<br>Unusual Place: ${unusualPlace}<br>With a Dark Secret: ${darkSecret}`;
 
     document.getElementById("character").innerHTML = characterDetails;
 }
+
