@@ -5,7 +5,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh; /* Change to min-height to allow scrolling */
+    min-height: 100vh;
 }
 
 .container {
@@ -34,6 +34,14 @@ button {
 
 #history-container {
     margin-top: 20px;
-    max-height: 400px; /* Set a maximum height for the history container */
-    overflow-y: auto; /* Add vertical scrollbar when content overflows */
+    max-height: 400px;
+    overflow-y: auto;
+    border-top: 1px solid #ccc; /* Add a top border to separate from generator container */
+    padding-top: 10px; /* Add padding for better separation */
+}
+
+.history-item {
+    margin-bottom: 10px; /* Add margin between each character in the history */
+    border-bottom: 1px solid #ccc; /* Add a bottom border to separate characters */
+    padding-bottom: 10px; /* Add padding for better separation */
 }
