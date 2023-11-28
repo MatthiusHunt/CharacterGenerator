@@ -280,6 +280,7 @@ function generateCharacter() {
 
     // Update the history
     const historyItem = document.createElement("div");
+    historyItem.classList.add("history-item"); // Add the history-item class
     historyItem.innerHTML = characterDetails;
-    historyContainer.prepend(historyItem);
+    document.getElementById("history-container").prepend(historyItem);
 }
