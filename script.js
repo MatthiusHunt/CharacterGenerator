@@ -284,3 +284,12 @@ function generateCharacter() {
     historyItem.innerHTML = characterDetails;
     document.getElementById("history-container").prepend(historyItem);
 }
+
+function toggleHistory() {
+    const historyContainer = document.getElementById("history-container");
+    const currentMaxHeight = parseInt(getComputedStyle(historyContainer).maxHeight);
+
+    // Toggle the max-height value to show/hide the history container
+    historyContainer.style.maxHeight = currentMaxHeight === 0 ? "400px" : "0";
+}
+
