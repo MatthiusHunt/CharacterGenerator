@@ -9,16 +9,17 @@
 <body>
     <div class="container">
         <h1>Character Generator</h1>
-        <p>Make millions of story worthy main characters with the click of a button!</p>
+        <p>Make millions of story-worthy main characters with the click of a button!</p>
         <div id="generator-container">
-          <button onclick="generateCharacter()">Generate</button>
-          <div id="character"></div>
+            <button onclick="generateCharacter()">Generate</button>
+            <div id="character"></div>
         </div>
-        
-        <div id="history-container">
-          <div id="history"></div>
-    </div>
 
+        <button onclick="toggleHistory()">Toggle History</button>
+        <div id="history-container">
+            <div id="history"></div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
