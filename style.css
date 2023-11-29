@@ -35,12 +35,13 @@ button {
 }
 
 #history-container {
-    margin-top: 20px;
-    max-height: 400px;
+    max-height: 0;
     overflow-y: auto;
-    border-top: 1px solid #ccc; /* Add a top border to separate from generator container */
-    padding-top: 10px; /* Add padding for better separation */
+    transition: max-height 0.3s ease; /* Add smooth transition effect */
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
 }
+
 
 .history-item {
     margin-bottom: 10px; /* Add margin between each character in the history */
