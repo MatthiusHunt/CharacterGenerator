@@ -28,15 +28,15 @@ button {
     border-radius: 5px;
 }
 
-.toggleButton {
-    margin-top: 10px; /* Add margin between the two buttons */
-}
-
 #generator-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px; /* Add gap between the buttons and the character container */
+    gap: 10px; /* Add gap between the buttons */
+}
+
+.toggleButton {
+    margin-top: 10px; /* Add margin between the buttons */
 }
 
 #history-container {
