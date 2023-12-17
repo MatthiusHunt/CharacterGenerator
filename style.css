@@ -1,28 +1,34 @@
-h1 {
-    text-decoration-line: bold;
-}
-
 body {
     font-family: 'Libre Franklin';
     background-color: #6EBEB5;
-    margin: 0;
     display: flex;
+    flex-direction: column; /* Change to column layout */
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    
+ 
 }
-
 
 .container {
     text-align: center;
-    background-color: white;
+    background-color: #F4F4F3;
     padding: 20px;
-    
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     border-color: #131020;
     border-style: solid;
+    max-width: 500px; /* Limit maximum width for better readability */
+    width: 100%; /* Make container width 100% of its parent */
+}
+
+.logo-link {
+    display: block;
+    text-align: center;
+}
+
+.logo {
+    max-width: 40%; /* Make the logo responsive */
+    height: auto; /* Maintain the aspect ratio */
 }
 
 button {
@@ -48,10 +54,11 @@ button {
     margin-top: 10px; /* Add margin between the buttons */
     background-color: #131020;
     color: #F4F4F3;
+    padding-bottom: 10px;
 }
 
 .downloadHistoryButton {
-    margin-top: 10px; /* Add margin between the buttons */
+   
     background-color: #6EBEB5;
     color: #131020;
 }
@@ -60,14 +67,15 @@ button {
     max-height: 0;
     overflow-y: auto;
     transition: max-height 0.3s ease; /* Add smooth transition effect */
-    border-top: 1px solid #ccc;
-    padding-top: 10px;
+    border-top: 5px solid #ccc;
+    padding-bottom: 10px;
+    margin: 20px;
 }
 
 
 .history-item {
     margin-bottom: 10px; /* Add margin between each character in the history */
-    border-bottom: 1px solid #ccc; /* Add a bottom border to separate characters */
-    padding-bottom: 10px; /* Add padding for better separation */
+    border-bottom: 5px solid #ccc; /* Add a bottom border to separate characters */
+    padding: 10px; /* Add padding for better separation */
     
 }
