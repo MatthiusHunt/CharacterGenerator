@@ -1,4 +1,4 @@
-const ages = Array.from({ length: 84 }, (_, i) => i + 1);
+const ages = ["Child", "Teenager", "Young Adult", "Adult", "Middle Aged", "Elderly"];
 const genders = ["Male", "Female", "Non-Binary"];
 const unusualProfessions = [
     "Cryptozoologist",
@@ -101,7 +101,6 @@ const unusualProfessions = [
     "Microgreens farmer",
     "Adventure photographer",
     "Virtual reality developer" ];
-
 
 const unusualPlaces = [
     "A futuristic metropolis",
