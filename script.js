@@ -255,7 +255,34 @@ const darkSecrets = [
     "They have a hidden list of enemies.",
     "They have a history of identity theft." ];
 
+const motivations = ["To Feel Loved", "To Feel Safe", "To Feel Fulfilled", "To Feel Purpose"];
 
+const flawedBeliefs = [
+  "The World Revolves Around Me",
+  "Fate Controls Everything",
+  "Money Solves All Problems",
+  "Knowledge Equals Wisdom",
+  "The Past Predicts the Future",
+  "Emotions Are a Sign of Weakness",
+  "Power Corrupts Absolutely",
+  "Success is Overnight",
+  "Love Conquers All",
+  "Change is Always Negative",
+  "Perfection Guarantees Happiness",
+  "I'm Always Right",
+  "Others are Always Against Me",
+  "The Ends Justify the Means",
+  "I Can Control Everything",
+  "Life is Fair",
+  "I Don't Need Anyone",
+  "Conflict Should be Avoided at All Costs",
+  "I Can't Change",
+  "The Grass is Always Greener",
+  "People Never Change",
+  "I'm Unlucky",
+  "I'm Inherently Flawed",
+  "Happiness is Found in External Validation"
+];
 
 
 const historyContainer = document.getElementById("history");
@@ -271,8 +298,12 @@ function generateCharacter() {
     const unusualProfession = getRandomValue(unusualProfessions);
     const unusualPlace = getRandomValue(unusualPlaces);
     const darkSecret = getRandomValue(darkSecrets);
+    const motivation = getRandomValue(motivations);
+    const flawedBelief = getRandomValue(flawedBeliefs);
 
-    const characterDetails = `**Age:** ${age}<br>**Gender:** ${gender}<br>**Unusual Profession:** ${unusualProfession}<br>**Unusual Place:** ${unusualPlace}<br>**With a Dark Secret:** ${darkSecret}`;
+    const characterDetails = `Age: ${age}<br>Gender: ${gender}<br>Unusual Profession: ${unusualProfession}<br>Unusual Place: ${unusualPlace}<br>With a Dark Secret: ${darkSecret}<br>Motivation: ${motivation}<br>Flawed Belief: ${flawedBelief}`;
+
+
 
     // Display the current character details
     document.getElementById("character").innerHTML = characterDetails;
@@ -292,3 +323,34 @@ function toggleHistory() {
     historyContainer.style.maxHeight = currentMaxHeight === 0 ? "400px" : "0";
 }
 
+function downloadHistory() {
+    // Get all history items
+    const historyItems = document.querySelectorAll(".history-item");
+
+    // Create a text string with the formatted history details
+    const historyText = Array.from(historyItems)
+        .map(item => item.innerHTML.replace(/<br\s*[/]?>/gi, '\n'))
+        .map(line => line.replace(/<.*?>/g, '')) // Remove any HTML tags
+        .join('\n\n') + '\n\n';  // Add a double newline character after each history item
+
+    // Create a Blob (Binary Large Object) with the text content
+    const blob = new Blob(historyText.split('\n')
+        .map(line => line.trim())
+        .map((line, index, array) => index === array.length - 1 ? line : line + '\n'), { type: "text/plain" });
+
+    // Create a temporary link element
+    const link = document.createElement("a");
+
+    // Set the download attribute and create a download link
+    link.download = "generated_history.txt";
+    link.href = window.URL.createObjectURL(blob);
+
+    // Append the link to the document
+    document.body.appendChild(link);
+
+    // Trigger a click on the link to start the download
+    link.click();
+
+    // Remove the link from the document
+    document.body.removeChild(link);
+}
