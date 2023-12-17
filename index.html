@@ -4,24 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Libre Franklin' rel='stylesheet'>
     <title>Character Generator</title>
 </head>
 <body>
     <div class="container">
         <h1>Character Generator</h1>
-        <p>Make millions of publish-worthy main characters with the *click* of a button!</p>
+        <h3>Make millions of publish-worthy main characters with the *click* of a button!</h3>
         
         <div id="character"></div>
 
         <div id="generator-container">
             <button onclick="generateCharacter()">Generate</button>
-            <button class="toggleButton" onclick="toggleHistory()">Toggle History</button>
+            <button class="toggleButton" onclick="toggleHistory()">Show History</button>
         </div>
 
         <div id="history-container">
             <div id="history"></div>
         </div>
+        <button class="downloadHistoryButton" onclick="downloadHistory()">Download History</button>
     </div>
+ 
+
+
 
     <script src="script.js"></script>
 </body>
