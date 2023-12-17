@@ -342,7 +342,7 @@ function downloadHistory() {
     const link = document.createElement("a");
 
     // Set the download attribute and create a download link
-    link.download = "generated_characters.txt";
+    link.download = "generated_history.txt";
     link.href = window.URL.createObjectURL(blob);
 
     // Append the link to the document
