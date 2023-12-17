@@ -272,7 +272,7 @@ function generateCharacter() {
     const unusualPlace = getRandomValue(unusualPlaces);
     const darkSecret = getRandomValue(darkSecrets);
 
-    const characterDetails = `Age: ${age}<br>Gender: ${gender}<br>Unusual Profession: ${unusualProfession}<br>Unusual Place: ${unusualPlace}<br>With a Dark Secret: ${darkSecret}`;
+    const characterDetails = `**Age:** ${age}<br>**Gender:** ${gender}<br>**Unusual Profession:** ${unusualProfession}<br>**Unusual Place:** ${unusualPlace}<br>**With a Dark Secret:** ${darkSecret}`;
 
     // Display the current character details
     document.getElementById("character").innerHTML = characterDetails;
