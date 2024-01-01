@@ -1,34 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link href='https://fonts.googleapis.com/css?family=Libre Franklin' rel='stylesheet'>
-    <title>Character Generator</title>
-    
-</head>
-<body>
+    <script src="https://kit.fontawesome.com/7f8ac56d4f.js" crossorigin="anonymous"></script>
+    <title>Character Forge</title>
+
+  </head>
+
+  <body>
     <div class="container">
-        <a href="https://firstdraftr.com/" target="_blank" class="logo-link">
-    <img src="https://firstdraftr.files.wordpress.com/2024/01/character-forge.png" alt="FirstDraftr Logo" class="logo">
-</a>
-        <h1>The Best FREE Character Generator</h1>
-        <h3>1.97 BILLION main characters at your fingertips</h3>
-        
-        <div id="character"></div>
+      <a href="https://firstdraftr.com/" target="_blank" class="logo-link">
+        <img src="https://firstdraftr.files.wordpress.com/2024/01/character-forge.png" alt="FirstDraftr Logo" class="logo">
+      </a>
 
-        <div id="generator-container">
-            <button onclick="generateCharacter()">Generate</button>
-            <button class="toggleButton" onclick="toggleHistory()">Show History</button>
-        </div>
+      <div id="character"></div>
 
-        <div id="history-container">
-            <div id="history"></div>
-        </div>
-        <button class="downloadHistoryButton" onclick="downloadHistory()">Download History</button>
+      <div id="generateButton">
+        <button onclick="generateCharacter()" title="Generate Random Character"><i class="fa-solid fa-shuffle"></i></button>
+
+        <button class="toggleButton" title="Toggle History" onclick="toggleHistory()"><i class="fa-solid fa-folder-open"></i></button>
+
+        <button class="downloadHistoryButton" title="Download History as .txt file" onclick="downloadHistory()"><i class="fa-solid fa-file-export"></i></button>
+      </div>
+
+      <div id="history-container">
+        <div id="history"></div>
+      </div>
     </div>
 
     <script src="script.js"></script>
-</body>
+  </body>
+
 </html>
