@@ -1,81 +1,70 @@
 body {
-    font-family: 'Libre Franklin';
-    background-color: #6EBEB5;
-    display: flex;
-    flex-direction: column; /* Change to column layout */
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
- 
+  font-family: 'Libre Franklin';
+  background: linear-gradient(to bottom, #a835db 0%, #341680 100%);
+  display: flex;
+  flex-direction: column;
+  /* Change to column layout */
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+
 }
 
 .container {
-    text-align: center;
-    background-color: #F4F4F3;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    border-color: #131020;
-    border-style: solid;
-    max-width: 500px; /* Limit maximum width for better readability */
-    width: 100%; /* Make container width 100% of its parent */
+  text-align: center;
+  background-color: #F4F4F3;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  border-color: #131020;
+  border-style: solid;
+  max-width: 500px;
+  /* Limit maximum width for better readability */
+  width: 100%;
+  /* Make container width 100% of its parent */
 }
 
-.logo-link {
-    display: block;
-    text-align: center;
-}
 
 .logo {
-    max-width: 40%; /* Make the logo responsive */
-    height: auto; /* Maintain the aspect ratio */
+  max-width: 40%;
+  /* Make the logo responsive */
+  height: auto;
+  /* Maintain the aspect ratio */
 }
 
 button {
-    padding: 10px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: #EF6F6C;
-    /*#4caf50;*/
-    color: #F4F4F3;
-    border: none;
-    border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  color: #F4F4F3;
+  background-color: #1e49dd;
+  border: none;
+  border-radius: 5px;
 }
 
-#generator-container {
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px; /* Add gap between the buttons */
+button:hover {
+  background-color: #0e88e5;
 }
 
-.toggleButton {
-    margin-top: 10px; /* Add margin between the buttons */
-    background-color: #131020;
-    color: #F4F4F3;
-    padding-bottom: 10px;
-}
 
-.downloadHistoryButton {
-   
-    background-color: #6EBEB5;
-    color: #131020;
-}
+
 
 #history-container {
-    max-height: 0;
-    overflow-y: auto;
-    transition: max-height 0.3s ease; /* Add smooth transition effect */
-    border-top: 5px solid #ccc;
-    padding-bottom: 10px;
-    margin: 20px;
+  max-height: 0;
+  overflow-y: auto;
+  transition: max-height 0.3s ease;
+  /* Add smooth transition effect */
+  border-top: 5px solid #ccc;
+  padding-bottom: 10px;
+  margin: 20px;
 }
 
 
 .history-item {
-    margin-bottom: 10px; /* Add margin between each character in the history */
-    border-bottom: 5px solid #ccc; /* Add a bottom border to separate characters */
-    padding: 10px; /* Add padding for better separation */
-    
+  margin-bottom: 10px;
+  /* Add margin between each character in the history */
+  border-bottom: 5px solid #ccc;
+  /* Add a bottom border to separate characters */
+  padding: 10px;
+  /* Add padding for better separation */
+
 }
